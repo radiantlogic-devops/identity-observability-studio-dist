@@ -28,5 +28,13 @@ for the cask and post-installation steps.
 The tag name and the asset name are reconstructed by the cask from its
 `version` stanza: renaming them will break installation.
 
-The archive is produced by `packaging/build-studio-artifact.sh` from the ZIP
-coming out of the build pipeline, which is not directly distributable as-is.
+The archive is produced by [`PoC/packaging/build-studio-artifact.sh`](PoC/packaging/build-studio-artifact.sh)
+from the ZIP coming out of the build pipeline, which is not directly
+distributable as-is.
+
+## PoC and packaging notes
+
+[`PoC/`](PoC/) holds the analysis and tooling behind this distribution: why the
+build pipeline's macOS archive is not directly distributable, the scripts that
+repackage and publish it, the end-user installation guide, and the path to a
+properly Apple-signed and notarised application.
