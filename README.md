@@ -1,10 +1,10 @@
 # identity-observability-studio-dist
 
-Artefacts de distribution macOS de **Identity Observability Studio**, le Studio
-Eclipse de la plateforme Radiant Logic Identity Observability.
+macOS distribution artifacts for **Identity Observability Studio**, the Eclipse
+Studio of the Radiant Logic Identity Observability platform.
 
-Ce dépôt ne contient pas de code : il ne sert qu'à héberger les archives
-publiées dans les *releases*, consommées par le cask Homebrew.
+This repository contains no source code: it only hosts the archives published
+in *releases*, which are consumed by the Homebrew cask.
 
 ## Installation
 
@@ -12,21 +12,21 @@ publiées dans les *releases*, consommées par le cask Homebrew.
 brew install --cask radiantlogic-devops/tap/identity-observability-studio
 ```
 
-Voir [`radiantlogic-devops/homebrew-tap`](https://github.com/radiantlogic-devops/homebrew-tap)
-pour le cask et les étapes post-installation.
+See [`radiantlogic-devops/homebrew-tap`](https://github.com/radiantlogic-devops/homebrew-tap)
+for the cask and post-installation steps.
 
-## Contenu d'une release
+## Release contents
 
 | | |
 | --- | --- |
-| Tag | `v<version>`, par exemple `v2026.08.24` |
+| Tag | `v<version>`, for example `v2026.08.24` |
 | Asset | `IdentityObservabilityStudio-<version>-macos-arm64.zip` |
 | Architecture | Apple Silicon (arm64) |
-| JRE | Temurin 21 embarqué dans le bundle — aucune dépendance Java externe |
-| Signature | ad-hoc, **non notarisée** par Apple |
+| JRE | Temurin 21 bundled in the app — no external Java dependency |
+| Signature | ad-hoc, **not notarized** by Apple |
 
-Le nom du tag et celui de l'asset sont reconstruits par le cask à partir de sa
-strophe `version` : les renommer casse l'installation.
+The tag name and the asset name are reconstructed by the cask from its
+`version` stanza: renaming them will break installation.
 
-L'archive est produite par `packaging/build-studio-artifact.sh` à partir du ZIP
-sortant du pipeline de build, qui n'est pas directement distribuable en l'état.
+The archive is produced by `packaging/build-studio-artifact.sh` from the ZIP
+coming out of the build pipeline, which is not directly distributable as-is.
